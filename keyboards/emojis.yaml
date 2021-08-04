@@ -1,9 +1,9 @@
 _header_:
-    author: "Colin Cheng ⎗zbinlin@outlook.com⎘"
+    author: "Colin Cheng <zbinlin@outlook.com>"
     ascii_mode: 0
     columns: 10
     width: 10
-    height: 34
+    height: 32
 
 Keyboards:
     KeyboardEmojiSmileysAndEmotion: {label: ☺️, send: Eisu_toggle, select: emoji_smileys_and_emotion_0}
@@ -3384,4 +3384,3 @@ flags_6:
         - {click: ''}
         - {click: KeyboardEmojisPageDownDisabled, width: 22.5}
         - {click: BackSpace, width: 22.5}
-

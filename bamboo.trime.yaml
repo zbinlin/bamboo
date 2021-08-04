@@ -6,11 +6,11 @@ name: 竹
 author: "Colin Cheng <zbinlin@outlook.com>"
 
 def:
-    rows:
-        row4: &row4 51.50
-        row5: &row5 41
-        row6: &row6 34
-        row7: &row7 29
+    #rows:
+    #    row4: &row4 51.50
+    #    row5: &row5 41
+    #    row6: &row6 34
+    #    row7: &row7 29
     columns:
         col5: &col5 20
         col6: &col6 16.66
@@ -34,6 +34,8 @@ style:
     hanb_font: hanb.ttf #擴充字型
     horizontal: true #水平模式
     horizontal_gap: 1 #鍵水平間距
+    vertical_correction: 0
+    vertical_gap: 1 #鍵盤行距
     layout: #懸浮窗口設置
         position: fixed #位置：left|right|left_up|right_up|fixed|bottom_left|bottom_right|top_left|top_right(left、right需要>=Android5.0)
         min_length: 4 #最小詞長
@@ -121,12 +123,18 @@ style:
         - emoji_flags_4
         - emoji_flags_5
         - emoji_flags_6
-        - emoticon_happy
-        - emoticon_fond
-        - emoticon_astonished
-        - emoticon_impotent
-        - emoticon_sad
-        - emoticon_mad
+        - emoticon_happy_0
+        - emoticon_happy_1
+        - emoticon_fond_0
+        - emoticon_fond_1
+        - emoticon_astonished_0
+        - emoticon_astonished_1
+        - emoticon_impotent_0
+        - emoticon_impotent_1
+        - emoticon_sad_0
+        - emoticon_sad_1
+        - emoticon_mad_0
+        - emoticon_mad_1
         - symbols
     label_text_size: 22 #標籤字號
     label_font: label.ttf #編標籤字型
@@ -147,8 +155,6 @@ style:
     text_font: latin.ttf #編碼字型
     text_height: 22 #編碼區高度
     text_size: 16 #編碼區字號
-    vertical_correction: 0
-    vertical_gap: 1 #鍵盤行距
 
 
 fallback_colors:
@@ -325,7 +331,7 @@ preset_keys:
     KeyboardNumeric: {label: "123", send: Eisu_toggle, select: numeric}
     KeyboardTextEditing: {label: ⎀, send: Eisu_toggle, select: text_editing}
     KeyboardEmojis: {label: ☺︎, send: Eisu_toggle, select: emoji_smileys_and_emotion_0}
-    KeyboardEmoticons: {label: 颜, send: Eisu_toggle, select: emoticon_happy}
+    KeyboardEmoticons: {label: ':-)', send: Eisu_toggle, select: emoticon_happy_0}
     KeyboardSymbols: {label: "!?#", send: Eisu_toggle, select: symbols}
 
     __patch:
@@ -443,18 +449,30 @@ preset_keyboards:
     emoji_flags_6:
         __include: keyboards/emojis:/flags_6
 
-    emoticon_happy:
-        __include: keyboards/emoticons:/happy
-    emoticon_fond:
-        __include: keyboards/emoticons:/fond
-    emoticon_astonished:
-        __include: keyboards/emoticons:/astonished
-    emoticon_impotent:
-        __include: keyboards/emoticons:/impotent
-    emoticon_sad:
-        __include: keyboards/emoticons:/sad
-    emoticon_mad:
-        __include: keyboards/emoticons:/mad
+    emoticon_happy_0:
+        __include: keyboards/emoticons:/happy_0
+    emoticon_happy_1:
+        __include: keyboards/emoticons:/happy_1
+    emoticon_fond_0:
+        __include: keyboards/emoticons:/fond_0
+    emoticon_fond_1:
+        __include: keyboards/emoticons:/fond_1
+    emoticon_astonished_0:
+        __include: keyboards/emoticons:/astonished_0
+    emoticon_astonished_1:
+        __include: keyboards/emoticons:/astonished_1
+    emoticon_impotent_0:
+        __include: keyboards/emoticons:/impotent_0
+    emoticon_impotent_1:
+        __include: keyboards/emoticons:/impotent_1
+    emoticon_sad_0:
+        __include: keyboards/emoticons:/sad_0
+    emoticon_sad_1:
+        __include: keyboards/emoticons:/sad_1
+    emoticon_mad_0:
+        __include: keyboards/emoticons:/mad_0
+    emoticon_mad_1:
+        __include: keyboards/emoticons:/mad_1
 
     symbols:
         __include: keyboards/symbols:/
