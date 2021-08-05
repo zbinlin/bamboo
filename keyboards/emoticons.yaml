@@ -7,7 +7,7 @@ _header_:
     height: 32
 
 Keyboards:
-    KeyboardEmoticonHappy: {label: 开心, send: Eisu_toggle, select: emoticon_astonished_0}
+    KeyboardEmoticonHappy: {label: 开心, send: Eisu_toggle, select: emoticon_happy_0}
     KeyboardEmoticonFond: {label: 喜欢,  send: Eisu_toggle, select: emoticon_fond_0}
     KeyboardEmoticonAstonished: {label: 惊讶, send: Eisu_toggle, select: emoticon_astonished_0}
     KeyboardEmoticonImpotent: {label: 无奈, send: Eisu_toggle, select: emoticon_impotent_0}
@@ -15,8 +15,8 @@ Keyboards:
     KeyboardEmoticonMad: {label: 生气, send: Eisu_toggle, select: emoticon_mad_0}
     KeyboardEmoticonPageUp: {label: '⎗', send: Eisu_toggle, select: .prior}
     KeyboardEmoticonPageDown: {label: '⎘', send: Eisu_toggle, select: .next}
-    KeyboardEmoticonPageUpDisabled: {label: '⎗', click: '', key_back_color: disabled_bg, key_text_color: disabled_fg}
-    KeyboardEmoticonPageDownDisabled: {label: '⎘', click: '', key_back_color: disabled_bg, key_text_color: disabled_fg}
+    KeyboardEmoticonPageUpDisabled: {label: '⎗', click: ''}
+    KeyboardEmoticonPageDownDisabled: {label: '⎘', click: ''}
 
 happy_0:
     __include: /_header_
@@ -50,7 +50,7 @@ happy_0:
         - {click: "*罒▽罒*"}
 
         - {click: KeyboardDefault, long_click: KeyboardEmojis, width: 22.5}
-        - {click: KeyboardEmoticonPageUpDisabled, width: 22.5}
+        - {click: KeyboardEmoticonPageUpDisabled, key_text_color: disabled_fg, hilited_key_text_color: disabled_fg, hilited_key_back_color: functional_bg, width: 22.5}
         - {click: '', width: 10}
         - {click: KeyboardEmoticonPageDown, width: 22.5}
         - {click: BackSpace, width: 22.5}
@@ -420,7 +420,7 @@ mad_0:
         - {click: KeyboardDefault, long_click: KeyboardEmojis, width: 22.5}
         - {click: KeyboardEmoticonPageUp, width: 22.5}
         - {click: '', width: 10}
-        - {click: KeyboardEmoticonPageDownDisabled, width: 22.5}
+        - {click: KeyboardEmoticonPageDown, width: 22.5}
         - {click: BackSpace, width: 22.5}
 
 mad_1:
@@ -457,5 +457,5 @@ mad_1:
         - {click: KeyboardDefault, long_click: KeyboardEmojis, width: 22.5}
         - {click: KeyboardEmoticonPageUp, width: 22.5}
         - {click: '', width: 10}
-        - {click: KeyboardEmoticonPageDownDisabled, width: 22.5}
+        - {click: KeyboardEmoticonPageDownDisabled, key_text_color: disabled_fg, hilited_key_text_color: disabled_fg, hilited_key_back_color: functional_bg, width: 22.5}
         - {click: BackSpace, width: 22.5}
